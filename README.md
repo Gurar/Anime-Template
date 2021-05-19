@@ -18,4 +18,4 @@ Design: [Anime](https://preview.colorlib.com/theme/anime/)
 - multi-page
 
 ## Authors
-[Jezy](https://github.com/Gurar)
+[Ježy Kozlovski](https://github.com/Gurar)
