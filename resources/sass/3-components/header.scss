@@ -3,13 +3,148 @@
 .header {
     .navbar {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        @include breakpoint.maxPoint(md) {
+            justify-content: space-between;
+        }
+        &__logo {
+            &-link {
+                font-size: 2.4rem;
+                font-weight: 700;
+                text-decoration: none;
+                color: #fff;
+                span {
+                    color: #e53637;
+                }
+            }
+        }
+
+        &__mid {
+            @include breakpoint.maxPoint(md) {
+                width: 100%;
+                &--collapse {
+                    position: absolute;
+                    top: 51px;
+                    left: 50%;
+                    width: 100%;
+                    height: 0;
+                    background-color: #fff;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.3s ease-in-out;
+                    transform: translateX(-50%);
+                    &.open {
+                        opacity: 1;
+                        height: 242px;
+                    }
+                }
+            }
+
+            @include breakpoint.minPoint(md) {
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &__nav {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint.maxPoint(md) {
+                overflow-y: auto;
+            }
+
+            @include breakpoint.minPoint(md) {
+                width: auto;
+                display: inline-block;
+            }
+            .isactive {
+                background-color: #e53637;
+                color: #fff;
+            }
+            &-link {
+                position: relative;
+                display: inline-block;
+                position: relative;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #b7b7b7;
+                text-decoration: none;
+                padding: 20px;
+                @include breakpoint.minPoint(md) {
+                    margin-right: 16px;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                @include breakpoint.maxPoint(md) {
+                    overflow-y: auto;
+                }
+                &:hover {
+                    color: #fff;
+                }
+            }
+
+            .dropdown {
+                position: relative;
+                &__list {
+                    display: none;
+                    position: absolute;
+                    left: 0;
+                    width: 150px;
+                    background-color: #fff;
+                    &-link {
+                        display: block;
+                        font-size: 1.4rem;
+                        color: #111;
+                        font-weight: 500;
+                        text-decoration: none;
+                        padding: 10px 20px;
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+                        &:hover {
+                            background-color: #e53637;
+                            color: #fff;
+                        }
+                    }
+                }
+                &:hover .dropdown__list {
+                    display: block;
+                }
+            }
+
+            &-arrow-down {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                font-size: 1.1rem;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__right {
+            display: flex;
+            align-items: center;
+            .search {
+                margin-right: 30px;
+            }    
+        }
+    }
+
+    .search, .sign {
+        display: inline-block;
+        font-size: 1.8rem;
+        color: #fff;
     }
 
     .menu {
         display: inline-block;
         margin-top: -2px;
         margin-right: -13px;
+        margin-left: 17px;
         @include breakpoint.minPoint(md) {
             display: none;
         }
