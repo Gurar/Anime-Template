@@ -35,7 +35,9 @@
     "webpack-dev-server": "^3.11.2",
     "webpack-remove-empty-scripts": "^0.7.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "bootstrap": "^5.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Gurar/Anime-Template.git"
