@@ -1,3 +1,15 @@
 module.exports = {
-    plugins: ["postcss-preset-env"],
-};
+    plugins: [
+        require('autoprefixer'),
+        require('mqpacker'),
+        require('cssnano')({
+            preset: [
+                'default', {
+                    discardComments: {
+                        removeAll: true,
+                    }
+                }
+            ]    
+        })
+    ]
+}

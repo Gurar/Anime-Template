@@ -6,6 +6,3 @@ hamburger();
 //drobdown navigation
 
 dropdown();
-
-
-

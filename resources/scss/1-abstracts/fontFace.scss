@@ -2,8 +2,8 @@
 	@font-face {
 	font-family: $font_name;
 	font-display: swap;
-    @if(file_exists(url("../../fonts/#{$file_name}.woff"))) {
-        src: url("../../fonts/#{$file_name}.woff") format("woff"); 
+    @if(file_exists(url("../fonts/#{$file_name}.woff"))) {
+        src: url("../fonts/#{$file_name}.woff") format("woff"); 
     }
 	font-weight: #{$weight};
 	font-style: #{$style};

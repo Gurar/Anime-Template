@@ -1,5 +1,5 @@
 @use '../1-abstracts/breakpoint.scss';
-@import '../../../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@use '~bootstrap/scss/bootstrap-grid.scss';
 .container {
     padding-left: 15px;
     padding-right: 15px;
