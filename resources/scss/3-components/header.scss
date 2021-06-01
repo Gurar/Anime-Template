@@ -1,0 +1,169 @@
+@use '../1-abstracts/breakpoint.scss';
+@use '../3-components/burger.scss';
+.header {
+    padding-top: 10px;
+    @include breakpoint.minPoint(md) {
+        padding-top: 0;
+    }
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @include breakpoint.maxPoint(md) {
+            justify-content: space-between;
+        }
+        &__logo {
+            &-link {
+                font-size: 2.4rem;
+                font-weight: 700;
+                text-decoration: none;
+                color: #fff;
+                span {
+                    color: #e53637;
+                }
+            }
+        }
+
+        &__mid {
+            @include breakpoint.maxPoint(md) {
+                order: 2;
+                width: 100%;
+                &--collapse {
+                    width: 100%;
+                    height: 0;
+                    background-color: #fff;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 0.3s ease-in-out;
+                    &.open {
+                        opacity: 1;
+                        height: auto;
+                    }
+                }
+            }
+
+            @include breakpoint.minPoint(md) {
+                width: auto;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+
+        &__nav {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            @include breakpoint.maxPoint(md) {
+                overflow-y: auto;
+            }
+
+            @include breakpoint.minPoint(md) {
+                width: auto;
+                display: inline-block;
+            }
+            .isactive {
+                background-color: #e53637;
+                color: #fff;
+            }
+            &-link {
+                position: relative;
+                display: inline-block;
+                font-size: 1.5rem;
+                font-weight: 700;
+                color: #b7b7b7;
+                text-decoration: none;
+                padding: 10px 20px 10px 20px;
+                @include breakpoint.minPoint(md) {
+                    padding: 20px;
+                    margin-right: 16px;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+
+            .dropdown {
+                position: relative;
+                &__list {
+                    display: none;
+                    background-color: #fff;
+                    @include breakpoint.minPoint(md) {
+                        width: 160px;
+                        position: absolute;
+                        left: 0;
+                    }
+                    &-link {
+                        display: block;
+                        font-size: 1.5rem;
+                        color: #b7b7b7;
+                        font-weight: 700;
+                        text-decoration: none;
+                        padding: 10px 0 10px 40px;
+                        @include breakpoint.minPoint(md) {
+                            font-size: 1.4rem;
+                            color: #111;
+                            font-weight: 500;
+                            padding: 10px 20px;
+                            &:hover {
+                                background-color: #e53637;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    &.active {
+                        display: block;
+                    }
+                }
+
+                @include breakpoint.minPoint(md) {
+                    &:hover .dropdown__list {
+                        display: block;
+                     }
+                }
+            }
+
+            &-arrow-down {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                font-size: 1.1rem;
+                transform: translateY(-50%);
+            }
+        }
+
+        &__right {
+            display: flex;
+            align-items: center;
+            order: 1;
+            @include breakpoint.minPoint(md) {
+                order: 2;
+            }
+            .search {
+                margin-right: 30px;
+            }    
+        }
+    }
+
+    .search, .sign {
+        position: relative;
+        top: 1px;
+        display: inline-block;
+        font-size: 1.6rem;
+        color: #fff;
+        @include breakpoint.minPoint(md) {
+            font-size: 1.8rem;    
+        }
+    }
+
+    .menu {
+        display: inline-block;
+        position: relative;
+        margin-right: -13px;
+        margin-left: 17px;
+        @include breakpoint.minPoint(md) {
+            display: none;
+        }
+    }
+
+}
