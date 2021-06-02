@@ -1,3 +1,5 @@
+@use '../1-abstracts/vars';
+
 * {
 	margin: 0;
 	padding: 0;
@@ -15,11 +17,23 @@ html {
 body {
 	font-size: 1rem;
 	scroll-behavior: smooth;
-	font-family: "Mulish",sans-serif;
+	font-family: vars.$mainFont;
     -webkit-font-smoothing: antialiased;
-	background: #0b0c2a;
+	background: vars.$background-color;
+	color: vars.$mainFontColor;
 }
 
 .wrapper {
 	min-height: 100vh;
+}
+
+h1, h2, h3 {
+	font-family: vars.$headingFonts;
+	font-weight: vars.$headingFontsWeight;
+}
+
+p {
+	font-family: vars.$mainFont;
+	font-size: 1.8rem;
+	font-weight: 400;
 }

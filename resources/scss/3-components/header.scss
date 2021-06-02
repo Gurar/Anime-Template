@@ -1,6 +1,8 @@
 @use '../1-abstracts/breakpoint.scss';
 @use '../3-components/burger.scss';
 .header {
+    position: relative;
+    z-index: 2;
     padding-top: 10px;
     @include breakpoint.minPoint(md) {
         padding-top: 0;
