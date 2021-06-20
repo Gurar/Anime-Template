@@ -171,6 +171,11 @@ module.exports = {
                     from: `${PATHS.node}/@fortawesome/fontawesome-free/webfonts`,
                     to: `${PATHS.assets}/fonts`
                 },
+
+                {
+                    from: `${PATHS.node}/bootstrap-icons/font/fonts`,
+                    to: `${PATHS.assets}/fonts`
+                }
             ]   
         }),
     ]
