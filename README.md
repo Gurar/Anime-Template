@@ -8,7 +8,7 @@
 
 This project is for educational porpuses only.
 
-Site published at https://gurar.github.io/Anime-Template/public
+Site published at https://gurar.github.io/Anime-Template/public/index.html
 
 Design: [Anime](https://preview.colorlib.com/theme/anime/)
 
