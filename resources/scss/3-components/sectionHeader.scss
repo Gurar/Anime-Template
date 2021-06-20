@@ -1,0 +1,61 @@
+@use '../1-abstracts/vars';
+@use '../1-abstracts/breakpoint';
+.section-header {
+    display: flex;
+    flex-direction: column;
+    @include breakpoint.minPoint(xs) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    margin-bottom: 30px;
+    &__title {
+        font-size: 2.4rem;
+        color: #ffffff;
+        font-weight: 600;
+        line-height: 21px;
+        text-transform: uppercase;
+        padding-left: 20px;
+        position: relative;
+        margin-bottom: 30px;
+        @include breakpoint.minPoint(xs) {
+            margin-bottom: 0;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            height: 32px;
+            width: 4px;
+            margin: auto 0;
+            background-color: vars.$accent-color;
+        }
+        &--sidebar {
+            font-size: 1.8rem;
+        }
+    }
+    
+    &__btn {
+        display: flex;
+        padding: 0;
+        background-color: transparent;
+        letter-spacing: 2px;
+    }
+
+    &__list {
+        &-item {
+            font-size: 1.3rem;
+            color: #b7b7b7;
+            margin-right: 7px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .isactive {
+            color: #fff;
+        }
+    }
+}
