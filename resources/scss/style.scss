@@ -5,6 +5,7 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '~@fortawesome/fontawesome-free/scss/solid';
 @import '~@fortawesome/fontawesome-free/scss/brands';
 @import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~bootstrap-icons/font/bootstrap-icons.css';
 //RESET
 @import '1-abstracts/reset';
 //BASE
@@ -14,6 +15,8 @@ $fa-font-path: '~@fortawesome/fontawesome-free/webfonts';
 @import '3-components/card';
 @import '3-components/arrow';
 @import '3-components/sectionHeader';
+@import '3-components/footer';
+@import '3-components/backTop';
 //LAYOUT
 @import '4-layout/layout';
 //PAGE
