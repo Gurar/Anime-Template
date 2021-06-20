@@ -4,8 +4,16 @@
     padding-left: 15px;
     padding-right: 15px;
 }
+
+@include breakpoint.minPoint(md) {
+    .row > * {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
 @include breakpoint.minPoint(xl) {
     .container {
-        
+        max-width: 1140px;    
     }
 }

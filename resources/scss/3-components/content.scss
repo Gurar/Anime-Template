@@ -1,0 +1,43 @@
+@use '../1-abstracts/breakpoint';
+.content {
+    padding-top: 80px;
+    padding-bottom: 60px;
+    .sidebar {
+        &__view {
+            margin-bottom: 80px;
+        }
+        &__comment {
+            .card {
+                display: flex;
+                align-items: center;
+                &__image {
+                    img {
+                        width: 136px;
+                    }
+                }
+                &__content {
+                    padding-top: 0;
+                    padding-left: 15px;
+                }
+
+                &__title {
+                    display: inline-block;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .trending,
+    .popular,
+    .recent,
+    .live {
+        margin-bottom: 50px;
+    }
+
+    @include breakpoint.minPoint(md) {
+        .live {
+            margin-bottom: 0;
+        }
+    }
+}

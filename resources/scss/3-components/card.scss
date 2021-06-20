@@ -1,0 +1,81 @@
+@use '../1-abstracts/vars';
+.card {
+    margin-bottom: 30px;
+    &__image {
+        position: relative;
+        img {
+            width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .ep,
+    .comment,
+    .view {
+        position: absolute;
+        z-index: 1;
+        font-size: 1.3rem;
+    }
+
+    .ep {
+        top: 10px;
+        left: 10px;
+        padding: 2px 12px;
+        background-color: vars.$accent-color;
+        border-radius: 4px; 
+    }
+
+    .comment {
+        bottom: 10px;
+        left: 10px;
+        background-color: #3d3d3d;;
+        padding: 2px 10px;
+        border-radius: 4px;
+    }
+
+    .view {
+        right: 10px;
+        background-color: #3d3d3d;;
+        padding: 2px 10px;
+        border-radius: 4px;
+        &--ps-bottom {
+            bottom: 10px;
+        }
+
+        &--ps-top {
+            top: 10px
+        }
+    }
+
+    &__content {
+        padding-top: 20px;
+    }
+
+    &__list {
+        margin-bottom: 10px;
+        &-item {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 1px 10px;
+            border-radius: 50px;
+            &:first-child {
+                margin-right: 5px;
+            }
+
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #fff;
+    }
+
+    &__view {
+        display: block;
+        font-size: 1.3rem;
+        color: #b7b7b7;
+    }
+}
