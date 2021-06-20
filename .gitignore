@@ -1,1 +1,10 @@
 node_modules/
+resources/
+babel.config.js
+package-lock.json
+package.json
+postcss.config.js
+README.md
+webpack.base.conf.js
+webpack.build.conf.js
+webpack.dev.conf.js
